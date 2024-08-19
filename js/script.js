@@ -3,6 +3,7 @@ const RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
 
 signoutBtn.addEventListener("click", signout);
+getInfosUser();
 
 function getRole(){
     return getCookie(RoleCookieName);
@@ -106,4 +107,8 @@ function sanitizeHtml(text){
     // Utilisez .innerHTML pour récupérer le contenu de "tempHtml"
     // Cela va "neutraliser" ou "échapper" tout code HTML potentiellement malveillant
     return tempHtml.innerHTML;
+}
+
+function getInfosUser(){
+    console.log("Récupération des informations de l'utilisateur ...");
 }
